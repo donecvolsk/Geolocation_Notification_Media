@@ -1,3 +1,6 @@
-// TODO: write code here
+import Timeline from "./Timeline";
 
-// comment this to pass build
+const container = document.querySelector(".containerPost");
+
+const timeline = new Timeline(container);
+timeline.initial();

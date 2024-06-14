@@ -14,7 +14,7 @@ span {
 
 .containerPost {
     margin: 1rem auto;
-    width: 40%;
+    width: 50%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -25,12 +25,100 @@ span {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    border-radius: 5%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .itemsHight {
     display: flex;
     margin-bottom: 10px;
 }
+
+.itemsPost-left {
+    width: 100%;
+}
+
+.itemsPost-right {
+    padding: 5px;
+}
+
+.inputPost {
+    width: 100%;
+    resize:vertical;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
+  .modal_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid ghostwhite;
+ 
+    box-sizing: border-box;
+    width: 480px;
+    background-color: #FFEB3B;
+  }
+  
+  .modal_content div>p {
+    margin-bottom: 1rem;
+  }
+
+  .modal_form {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+  }
+
+  .timeline_form {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    align-items: end;
+    background-color: steelblue;
+  }
+  
+  .modal_form_controls {
+    align-self: end;
+  }
+  
+  .modal_input {
+    box-sizing: border-box;
+    align-self: stretch;
+    border: 1px solid ghostwhite;
+    border-radius: 10px;
+    padding: 1.0rem 0.5rem;
+    margin-bottom: 1rem;
+    resize: none;
+  }
+  
+  .modal_footer {
+    margin-bottom: 1rem;
+    color: red;
+    font-size: 0.625rem;
+  }
+  
+  .modal_button {
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
 
