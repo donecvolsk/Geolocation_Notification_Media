@@ -3,6 +3,7 @@ export default class CreatePost {
     this.container = container;
   }
 
+  //создаем пост и добавляем в html
   showPost(latitude, longitude, val) {
     const postHtml = `
         <div class="itemPost">
@@ -21,6 +22,7 @@ export default class CreatePost {
     this.container.insertAdjacentHTML("afterBegin", postHtml);
   }
 
+  //создаем окно c ручным вводом координат и добавляем в html
   showModalManualCoords() {
     const modalManualCoordsHtml = `
     <div data-modal="modal" class="modal">
@@ -31,8 +33,12 @@ export default class CreatePost {
           <p>Широта и долгота через запятую</p>
         </div>
         <div data-id="modalForm" class="modal_form">
-          <input data-id="modalInput" name="coords" class="modal_input" placeholder="Введите координаты, например: -90.12345, 180.12345" required>
-        </div>       
+          <input class="modal_input" placeholder="Введите координаты, например: -90.12345, 180.12345" required>
+        </div>
+        <div class="modal_form_controls"> 
+            <button type="reset" data-id="modalButtonCancel" class="modal_button button_cancel">Отмена</button> 
+            <button type="submit" data-id="modalButtonOk" class="modal_button button_ok">Ок</button> 
+          </div>       
       </div>
     </div>
     `;
@@ -40,7 +46,8 @@ export default class CreatePost {
     this.container.insertAdjacentHTML("afterBegin", modalManualCoordsHtml);
   }
 
-  ManualPost(latitude, val) {
+  //создаем пост c ручным вводом координат и добавляем в html
+  ManualPost(lat, lng, val) {
     const postHtml = `
         <div class="itemPost">
       <div class="itemsHight">
@@ -52,7 +59,8 @@ export default class CreatePost {
         </div>
         <div class="itemsPost-right">${new Date().toLocaleString()}</div>                  
       </div>
-      <div class="coordinates">[${latitude}]</div>
+      <div class="coordinates">[${lat}, ${lng}]</div>
+      
     </div>
         `;
     this.container.insertAdjacentHTML("afterBegin", postHtml);
